@@ -11,4 +11,40 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 select * from user
 
 </select>
+
+
+<select id="findAll" resultType="com.hehui.pojo.User">
+
+select * from user
+
+</select>
+
+<!-- 增-->
+
+<insert id="AddUser" parameterType="com.hehui.pojo.User">
+INSERT INTO user(username,password)VALUES(#{username},#{password})
+
+</insert>
+
+<!-- 删 -->
+<delete id="deleteUser" parameterType="com.hehui.pojo.User">
+
+
+		delete from user where id=#{id}
+</delete>
+
+<!-- 改 -->
+
+<!-- 查 -->
+<select id="getUserByid" resultType="com.hehui.pojo.User">
+select * from user where id=#{id}
+
+</select>
+<!-- 更 -->
+<update id="updateUser" parameterType="com.hehui.pojo.User">
+update user set username=#{username},password=#{password} where id=#{id}
+
+
+</update>
+
 </mapper>

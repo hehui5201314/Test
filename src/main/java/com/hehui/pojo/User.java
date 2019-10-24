@@ -40,6 +40,11 @@ public class User {
 	public User() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + ", iphone="
+				+ iphone + "]";
+	}
 	public User(int id, String username, String password, String email, String iphone) {
 		super();
 		this.id = id;

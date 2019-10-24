@@ -31,6 +31,20 @@
 		<property name="configLocation" value="classpath:SqlMapConfig.xml" />
 		<!-- 别名包扫描 -->
 		<property name="typeAliasesPackage" value="com.hehui.pojo" />
+		
+		<!-- 分页插件配置 -->
+		 <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <props>
+                            <prop key="helperDialect">mysql</prop>
+                            <prop key="reasonable">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
 	</bean>
 	
     <!-- 动态代理，第二种方式：包扫描（推荐）： -->

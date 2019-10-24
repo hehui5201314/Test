@@ -11,14 +11,14 @@
   
 </head>
 <body>
-<c:forEach items="${uslist}" var="us">
+<h1>hehui</h1>
+<table>
+<c:forEach items="${userlist}" var="user">
                     <tr>
-                        <td>${us.username}</td>
-                    
-                        <td>
-                           
-                        </td>
+                        <td>${user.username}</td>
+                       
                     </tr>
                 </c:forEach>
+                </table>
 </body>
 </html>
